@@ -4,7 +4,7 @@ from colorama import Fore
 from colorama import Style
 
 
-def displayed(y, f):
+def displayed(y, f,):
     if y == 5:
         if f:
             print(f"{y} Correct White Balls and Powerball: Jackpot $324,000,000")
