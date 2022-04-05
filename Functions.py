@@ -1,3 +1,9 @@
+# Function section
+import colorama
+from colorama import Fore
+from colorama import Style
+
+
 def displayed(y, f):
     if y == 5:
         if f:
@@ -29,5 +35,18 @@ def displayed(y, f):
             print("No White Balls Just Powerball: $4")
         else:
             print("Try again!")
+    elif y > 5:
+        print("Something wrong check numbers")
     else:
         print("Try again!")
+
+
+def sub_draw_printing(x, y):
+    colorama.init()
+    print("Today Powerball Winning Numbers:")
+    print(Fore.BLUE + Style.DIM + f"{x}" + Style.RESET_ALL, Fore.YELLOW + f"{y}" + Style.RESET_ALL, sep=" - ")
+
+
+def game_draw_printing(x, y):
+    print("Your Lucky Numbers:")
+    print(Fore.BLUE + Style.DIM + f"{x}" + Style.RESET_ALL, Fore.YELLOW + f"{y}" + Style.RESET_ALL, sep=" - ")

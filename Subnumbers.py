@@ -12,8 +12,11 @@ class Subnumbers(Numbers):
         x = 0
         while x != 5:
             y = randrange(1, self.getrangeofwhite())
-            subcribdnums.append(y)
-            x += 1
+            if y not in subcribdnums:
+                subcribdnums.append(y)
+                x += 1
+            else:
+                pass
         return sorted(subcribdnums, reverse=False)
 
     def getpowerball(self):
