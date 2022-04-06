@@ -13,13 +13,13 @@ class Powerball(Subnumbers):  # Create the main game class
         f = False  # Flag for the Powerball number : False = No hit!,True = Hit!
         for (i, j) in zip(machinenum[0], subcribenum[0]):  # a double loop for two iterators in machine number
             # and subscribe numbers  simultaneously
-            if j == i or j in machinenum[0]:  # if statement for validate the winning
-                y += 1  # Adding to the counter  for sum the hits of the subscribe
-            else:        # if not get another random number and dont add to the counter
-                pass   # Pass
-        if subcribenum[1] == machinenum[1]:  # An if statement for validation of Powerball
-            f += True  # Change the flag to true
-        else:     # else pass keep the flag False
+            if j == i or j in machinenum[0]:
+                y += 1
+            else:
+                pass
+        if subcribenum[1] == machinenum[1]:
+            f += True
+        else:
             pass
         game_draw_printing('| '.join(map(str, machinenum[0])), str(machinenum[1]))   # print the machine game numbers
         # without a bracebrackets
