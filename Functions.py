@@ -6,7 +6,8 @@ from colorama import Style    # import Style lib for the style of the color
 
 def displayed(y, f,):    # def a function for the result of the subscription
     if y == 5:     # y representing the amount of hits of the subscription on the whiteball
-        if f:      # f is the flag for the hitting on the powernumber ,f=True=hit on powerball f=False dont hit the powerball
+        if f:      # f is the flag for the hitting on the powernumber ,f=True=hit on powerball f=False dont hit the
+            # powerball
             print(f"{y} Correct White Balls and Powerball: Jackpot"+" "+Fore.YELLOW+"$324,000,000"+Style.RESET_ALL)
         else:
             print(f"{y} Correct White Balls and no Powerball:"+" "+Fore.YELLOW+"$1,000,000"+Style.RESET_ALL)
@@ -41,12 +42,15 @@ def displayed(y, f,):    # def a function for the result of the subscription
         print("Try again!")
 
 
-def sub_draw_printing(x, y):   # def a function for printing the numbers of subscription
+def sub_draw_printing(x, y):      # def a function for printing the numbers of subscription
+    print("Your Lucky Numbers:")
+    print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + f"{x}" + Style.RESET_ALL, Fore.YELLOW + f"{y}" + Style.RESET_ALL, sep="- ")
+
+
+def game_draw_printing(x, y):   # def a function for printing the numbers of the game
     colorama.init()
     print("Today Powerball Winning Numbers:")
-    print(Fore.BLUE + Style.DIM + f"{x}" + Style.RESET_ALL, Fore.YELLOW + f"{y}" + Style.RESET_ALL, sep=" - ")
+    print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + f"{x}" + Style.RESET_ALL, Fore.YELLOW + f"{y}" + Style.RESET_ALL, sep="- ")
 
 
-def game_draw_printing(x, y):      # def a function for printing the numbers of subscription
-    print("Your Lucky Numbers:")
-    print(Fore.BLUE + Style.DIM + f"{x}" + Style.RESET_ALL, Fore.YELLOW + f"{y}" + Style.RESET_ALL, sep=" - ")
+

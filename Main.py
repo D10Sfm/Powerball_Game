@@ -21,9 +21,13 @@ class Powerball(Subnumbers):  # Create the main game class
             f += True
         else:
             pass
-        game_draw_printing('| '.join(map(str, machinenum[0])), str(machinenum[1]))   # print the machine game numbers
+        user_white_balls = '| '.join(map(str, machinenum[0]))
+        user_power_ball = str(machinenum[1])
+        game_white_balls = '| '.join(map(str, subcribenum[0]))
+        game_power_ball = str(subcribenum[1])
+        sub_draw_printing(user_white_balls, user_power_ball)  # print the machine game numbers
         # without a bracebrackets
-        sub_draw_printing('| '.join(map(str, subcribenum[0])), str(subcribenum[1]))  # print the subscribe numbers
+        game_draw_printing(game_white_balls, game_power_ball)  # print the subscribe numbers
         # without
         # a bracebrackets
         displayed(y, f)

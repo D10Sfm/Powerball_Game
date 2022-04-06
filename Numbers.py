@@ -1,6 +1,5 @@
 # Main Static class for the numbers range
-import sys   # import sys module for printing an stderr
-
+import warnings    # import warnings module for printing a warning message
 
 class Numbers:      # creating a main class of numbers (ranges)
     def __init__(self, rangeofwhite=21, rangeofgold=11):       # constructor for the class
@@ -19,4 +18,5 @@ class Numbers:      # creating a main class of numbers (ranges)
         elif x == 2:
             self.rangeofgold = rangeof
         else:
-            print(sys.stderr.write("Wrong Choise!!"))
+            warnings.warn("Wrong Choice!")
+
