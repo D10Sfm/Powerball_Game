@@ -1,9 +1,9 @@
 # The class of the logic draw
 from random import *
-from Numbers import Numbers
+from Classes.Numbers import Numbers
 
 
-class Subnumbers(Numbers):      # Creating a class for the drawing of the numbers
+class Draw(Numbers):      # Creating a class for the drawing of the numbers
     def __init__(self):      # def an constructor from the numbers class
         super().__init__(rangeofwhite=21, rangeofgold=11)    # the numbers class parameters(range)
 

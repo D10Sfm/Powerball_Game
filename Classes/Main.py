@@ -1,9 +1,9 @@
 # The Main class of the game her i will execute and combined all the methods
-from Subnumbers import Subnumbers
-from Functions import *
+from Classes.Draw import Draw
+from Utilitis.Functions import *
 
 
-class Powerball(Subnumbers):  # Create the main game class
+class Powerball(Draw):  # Create the main game class
 
     def powerball(self):  # Creating the main function of the game
         subcribenum = [self.getwhiteballs(), self.getpowerball()]  # Create a variable for the white ball list and
