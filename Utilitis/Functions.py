@@ -1,56 +1,59 @@
 # Function section
-import colorama    # import the colorama module for printing a string with color
-from colorama import Fore     # import the Fore lib for the color option
-from colorama import Style    # import Style lib for the style of the color
+
+from colorama import Fore  # import the Fore lib for the color option
+from colorama import Style  # import Style lib for the style of the color
 
 
-def displayed(y, f,):    # def a function for the result of the subscription
-    if y == 5:     # y representing the amount of hits of the subscription on the whiteball
-        if f:      # f is the flag for the hitting on the powernumber ,f=True=hit on powerball f=False dont hit the
-            # powerball
-            print(f"{y} Correct White Balls and Powerball: Jackpot"+" "+Fore.YELLOW+"$324,000,000"+Style.RESET_ALL)
-        else:
-            print(f"{y} Correct White Balls and no Powerball:"+" "+Fore.YELLOW+"$1,000,000"+Style.RESET_ALL)
-    elif y == 4:
-        if f:
-            print(f"{y} Correct White Balls and Powerball:"+" "+Fore.YELLOW+"$10,000"+Style.RESET_ALL)
-        else:
-            print(f"{y} Correct White Balls and no Powerball:"+" "+Fore.YELLOW+"$100"+Style.RESET_ALL)
-    elif y == 3:
-        if f:
-            print(f"{y} Correct White Balls and Powerball:"+" "+Fore.YELLOW+"$100"+Style.RESET_ALL)
-        else:
-            print(f"{y} Correct White Balls and no Powerball:"+" "+Fore.YELLOW+"$7"+Style.RESET_ALL)
-    elif y == 2:
-        if f:
-            print(f"{y} Correct White Balls and Powerball:"+" "+Fore.YELLOW+"$7"+Style.RESET_ALL)
-        else:
-            print(f"{y} Correct White Balls and no Powerball! Please Try again!")
-    elif y == 1:
-        if f:
-            print(f"{y} Correct White Balls and Powerball:"+" "+Fore.YELLOW+"$4"+Style.RESET_ALL)
-        else:
-            print(f"{y} Correct White Balls and no Powerball! Please Try again!")
-    elif y == 0:
-        if f:
-            print("No White Balls Just Powerball:"+" "+Fore.YELLOW+"$4"+Style.RESET_ALL)
-        else:
-            print("Try again!")
-    elif y > 5:     # An flag for check if the counter loop is correct
-        print("Something wrong check numbers")
+def results(prize, hits, win=True):
+    if hits > 0 and win:
+        return f"{hits} Correct White Balls and Powerball: Jackpot" + " " + money_coloring(prize)
+    elif hits <= 0 and win:
+        return "No White Balls Just Powerball:" + " " + money_coloring(prize)
+    elif hits == 0:
+        return "Try again!"
     else:
-        print("Try again!")
+        return f"{hits} Correct White Balls and no Powerball:" + " " + money_coloring(prize)
 
 
-def sub_draw_printing(x, y):      # def a function for printing the numbers of subscription
-    print("Your Lucky Numbers:")
-    print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + f"{x}" + Style.RESET_ALL, Fore.YELLOW + f"{y}" + Style.RESET_ALL, sep="- ")
+def prize_money(x, y):
+    prize = ''
+    if x == 3 and y or x == 4 and not y:
+        prize = "$100"
+    elif x == 3 and not y or x == 2 and y:
+        prize = "$7"
+    elif x == 1 and y or y:
+        prize = "$4"
+    elif x > 4:
+        if y:
+            prize = "$324,000,000"
+        else:
+            prize = "$1,000,000"
+    elif x == 4 and y:
+        prize = "$10,000"
+
+    return prize
 
 
-def game_draw_printing(x, y):   # def a function for printing the numbers of the game
-    colorama.init()
-    print("Today Powerball Winning Numbers:")
-    print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + f"{x}" + Style.RESET_ALL, Fore.YELLOW + f"{y}" + Style.RESET_ALL, sep="- ")
+def money_coloring(money):
+    return Fore.YELLOW + money + Style.RESET_ALL
 
 
+def result_display(whiteball_hits, powerball_hit, ):
+    prize = prize_money(whiteball_hits, powerball_hit)
+    result = results(prize, whiteball_hits, powerball_hit)
+    return result
 
+
+def draw_printing(whiteballs, powerball, id):  # def a function for printing the numbers of the game
+    if id:
+        print("Your Lucky Numbers:")
+        print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + f"{result_output(whiteballs)}" + Style.RESET_ALL,
+              Fore.YELLOW + f"{powerball}" + Style.RESET_ALL, sep="- ")
+    else:
+        print("Today Powerball Winning Numbers:")
+        print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + f"{result_output(whiteballs)}" + Style.RESET_ALL,
+              Fore.YELLOW + f"{powerball}" + Style.RESET_ALL, sep="- ")
+
+
+def result_output(result):
+    return '| '.join(map(str, result))
