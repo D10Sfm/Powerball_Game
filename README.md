@@ -29,14 +29,17 @@ Fasil<sup>Masfin</sup>
 
 
 ##Files Navigation
-- [draw file](Classes/Draw.py)
-- [main file](Classes/Main.py)
-- [function file](Utilitis/Functions.py)
+- [Classes](Classes)
+  1. [draw file](Classes/Draw.py)
+  2. [main file](Classes/Main.py)
+- [Utilities](Utilities)
+  1. [function file](Utilities/Functions.py)
 - [run file](run.py)
+- [read me file](README.md)
 
 
 
 #Contact
-- [LinkdIn](https://www.linkedin.com/in/fasilmasfin/)
-
-- [GitHub](https://github.com/D10Sfm)
+- [![linkedIn](images/iconmonstr-linkedin-3.svg)](https://www.linkedin.com/in/fasilmasfin/)
+<br><br>
+- [![GitHub](images/iconmonstr-github-1.svg)](https://github.com/D10Sfm)

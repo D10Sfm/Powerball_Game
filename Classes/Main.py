@@ -1,6 +1,6 @@
 # The Main class of the game her i will execute and combined all the methods
 from Classes.Draw import Draw
-from Utilitis.Functions import *
+from Utilities.Functions import *
 import keyboard
 
 

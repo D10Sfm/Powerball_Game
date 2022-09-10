@@ -1,7 +1,7 @@
 # The class of the logic draw
 from random import *
 # from Classes.Numbers import Numbers
-from Utilitis.Functions import *
+from Utilities.Functions import *
 import warnings
 
 
