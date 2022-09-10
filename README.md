@@ -1,7 +1,7 @@
 # Powerball_Game
 
-###Descripton:   
-#####The Powerball game includes two part.
+### Description:   
+##### The Powerball game includes two part.
 1. Includes 5 number. 
 These five numbers are white ball numbers, 
 which are drawn randomly from 20 numbers from 1 to 20 inclusively
@@ -11,7 +11,7 @@ number, which is obtained randomly from 10 numbers(1,2,3,4,5,6,7,8,9,10).
 The program will display today's Powerball winning numbers,your lucky numbers, and display the results based on your lucky numbers
 against Today's Powerball winning numbers.
 
-###Goals:
+### Goals:
 - [x] `keep the code neat and simple`
 - [x] `Do not abandon the principles of OOP`
 - [x] `Expand my coding skills`
@@ -19,16 +19,16 @@ against Today's Powerball winning numbers.
 
 
 
-###Keywords:
+### Keywords:
 - Python
 - OOP
 - Python modules
 
-###Author: 
+### Author: 
 Fasil<sup>Masfin</sup>
 
 
-##Files Navigation
+## Files Navigation
 - [Classes](Classes)
   1. [draw file](Classes/Draw.py)
   2. [main file](Classes/Main.py)
